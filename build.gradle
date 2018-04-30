@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+mainClassName = 'App'
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+    testCompile 'org.powermock:powermock-core:1.7.4'
+    testCompile 'org.powermock:powermock-module-junit4:1.7.4'
+    testCompile 'org.powermock:powermock-api-mockito:1.7.4'
+}
+
+repositories {
+    jcenter()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
