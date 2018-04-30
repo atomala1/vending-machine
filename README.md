@@ -23,3 +23,7 @@ Run the tests by running the tests with the gradle wrapper
 ```
 ./gradlew test jacocoTestReport
 ```
+
+## Notes
+
+If the user tries to do anything out of the ordinary, the application will throw a named RuntimeException.
